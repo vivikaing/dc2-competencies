@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DC2-CF Knowledge-based Competencies</title>
+    <style>
+        /* Common styles for both large and small screens */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #008EC0;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .menu {
+            float: left;
+            width: 20%;
+            background-color: #f2f2f2;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu li {
+            margin-bottom: 10px;
+        }
+
+        .submenu {
+            display: none;
+            padding-left: 10px;
+        }
+
+        .subcategory-label {
+            background-color: #ddd;
+            cursor: pointer;
+            padding: 5px 10px;
+            display: block;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .subcategory-label:hover {
+            background-color: #ccc;
+        }
+
+        .content {
+            float: left;
+            width: 60%;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .category-label {
+            cursor: pointer;
+            padding: 5px 10px;
+            background-color: #b7d7e8;
+            display: block;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .category-label:hover {
+            background-color: #9bd8f0;
+        }
+
+        .category-checkbox,
+        .subcategory-checkbox {
+            display: none;
+        }
+
+        .category-checkbox:checked ~ .submenu,
+        .subcategory-checkbox:checked ~ .submenu {
+            display: block;
+        }
+
+        /* Responsive styles for smaller screens (e.g., mobile phones) */
+        @media (max-width: 768px) {
+            .menu {
+                width: 100%;
+                float: none;
+                padding: 10px; /* Adjust padding for smaller screens */
+            }
+
+            .content {
+                width: 100%;
+                float: none;
+                padding: 20px; /* Adjust padding for smaller screens */
+            }
+
+            .menu ul {
+                padding-left: 10px; /* Adjust left padding for smaller screens */
+            }
+
+            .menu li {
+                margin-bottom: 5px; /* Adjust margin for smaller screens */
+            }
+
+            .subcategory-label {
+                padding: 5px; /* Adjust padding for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>DC2-CF Knowledge-based Competencies</h1>
+    </header>
+
+    <!-- Left Menu Section -->
+    <nav class="menu">
+        <ul class="accordion">
+            <!-- First-level categories -->
+            <li>
+                <input type="checkbox" class="category-checkbox" id="category1">
+                <label for="category1" class="category-label">1. Governance and Management</label>
+                <ul class="submenu">
+                    <!-- Second-level categories (subcategories) -->
+                    <li>
+                        <input type="checkbox" class="subcategory-checkbox" id="subcategory1_1">
+                        <label for="subcategory1_1" class="subcategory-label">1.1 Government, policy, and regulation</label>
+                        <ul class="submenu">
+                            <!-- Third-level categories (subsubcategories) -->
+                            <li class="subsubcategory"><a href="#" data-definition="Understanding the independence of multilevel governmental subdivisions in their decision-making, to act as more effective partners in the achievement of smart city objectives.">1.1.1 Degree of local autonomy in multilevel governance systems</a></li>
+                            <li class="subsubcategory"><a href="#" data-definition="Understanding the general data protection regime established by the government, such as the UK General Data Protection Regulation (UK GDPR). This covers the data protection principles, rights and obligations, to ensure that citizen’s and stakeholders’ data are protected in smart city projects.">1.1.2 Data protection regulatory frameworks</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Understanding how laws, regulations, and policies may obligate or constrain what citizens, stakeholders and partners are able to do or need to comply with. This helps differentiate between what is required by law versus what is “just the way it’s always been done”.">1.1.3 Legislative and regulatory landscape</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a level of familiarity with the internal resources, such as financial and human resources, that local governments in smart cities have access to, including how well local governments can manage and distribute resources for the successful implementation of smart city projects.">1.1.4 Local-authority internal resources (incl. human and financial)</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of topics including entrepreneurial governance, urban social movements, gentrification, policing, planning and redevelopment, and the urban policy mobilities literature which accommodates a broad range of critical interventions into the social reproduction of cities.">1.1.5 Best practice in policy mobility</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <input type="checkbox" class="subcategory-checkbox" id="subcategory1_2">
+                        <label for="subcategory1_2" class="subcategory-label">1.2 Change and transformation</label>
+                        <ul class="submenu">
+                            <!-- Third-level categories (subsubcategories) -->
+                            <li class="subsubcategory"><a href="#" data-definition="Recognising the purpose of requirements management to ensure that smart city development goals are successfully implemented. This covers some activities including gathering, analysing, defining, prioritising, and validating and maintaining requirements.">1.2.1 Requirements management</a></li>
+                            <li class="subsubcategory"><a href="#" data-definition="Providing leadership, advice and implementation support to assess organisational capabilities and to identify, prioritise and implement organisation changes.">1.2.2 Organisational capability development</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of strategies and best practises for streamlining procedures and promoting continuous improvement, including methods for improving efficiency, effectiveness, and innovation in project management and delivery, which also includes process mapping, performance measurement, and process redesign.">1.2.3 Process management and improvement</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Understanding the principles, procedures, and best practises of project management. These include specifying the project's scope, establishing goals, allocating resources, keeping track of developments, and minimising risks. It includes the use of project management frameworks like agile, waterfall, or hybrid techniques to guarantee that smart city projects are successfully delivered on schedule, within budget, and in accordance with stakeholder expectations.">1.2.4 Project management</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a level of familiarity with identifying, planning, measuring and tracking benefits from the start of the smart city project investment until realisation of the last projected benefit. Ensuring that the desired benefits are specific, measurable, agreed, realistic and time bounded.">1.2.5 Benefits management</a></li>						
+                        </ul>
+                    </li>
+					<li>
+                        <input type="checkbox" class="subcategory-checkbox" id="subcategory1_3">
+                        <label for="subcategory1_3" class="subcategory-label">1.3 Stakeholders and collaboration</label>
+                        <ul class="submenu">
+                            <!-- Third-level categories (subsubcategories) -->
+                            <li class="subsubcategory"><a href="#" data-definition="Understanding the relationships and organisational structure of the different stakeholders in the governing networks of smart cities, to promote efficient collaboration and decision-making throughout the execution of digital innovation projects, this includes understanding the roles, responsibilities, and interactions among various organisations.">1.3.1 Structure of governance networks</a></li>
+                            <li class="subsubcategory"><a href="#" data-definition="Having a level of familiarity with the dynamics of governance networks in smart cities, including stakeholder power dynamics, routes of communication, and decision-making procedures. Including how these dynamics affect how well collaboration and coordination efforts work together.">1.3.2 Dynamics of governance networks</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Understanding the distribution, sharing, and pooling of resources—financial, human, and technological—among stakeholders in the governance networks of smart cities, to enable the successful execution of digital innovation projects, including techniques for equitable resource allocation and effective resource management.">1.3.3 Resource distribution and pooling in governance networks</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Understanding the structure, behaviour, and interactions of governance networks—as well as the duties of different stakeholders. In order to achieve the objectives of successful smart city projects, effective governance network management provides collaboration, coordination, and alignment of interests among varied participants.">1.3.4 Governance network management</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a level of familiarity with the processes used to ensure the responsibility, transparency, and answerability of those involved in digital innovation projects. Including frameworks for setting up distinct lines of accountability, keeping track of performance, and dealing with non-compliance.">1.3.5 Accountability</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a level of familiarity with the legal, moral, and technical facets associated with possessing, controlling, and managing data, along with the duties, rights, and obligations of data keepers. Including ways to protect privacy and security while ensuring key parties have access to data. In order to support informed decision-making and foster innovation in smart city efforts, data ownership and accessibility must be balanced.">1.3.6 Data ownership and accessibility (stakeholders)</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="In order to engage a variety of audiences, effectively communicate complicated information, and create a shared understanding of smart city efforts, managers need to have a level of familiarity of narrative strategies, visualisations, and storytelling methodologies. The exchange of knowledge and the social acceptability of digital innovation projects are all made possible through storytelling.">1.3.7 Storytelling</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of a variety of stakeholder engagement methods and strategies, such as co-creation workshops, participatory approaches, open forums, and online platforms. Including methods for encouraging cooperation, harnessing group intelligence for project success, and ensuring inclusive and meaningful engagement.">1.3.8 Engagement methods and mechanisms (stakeholders)</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a level of familiarity with the methods for identifying and including underrepresented groups, marginalised communities, and vulnerable populations. For more inclusive and sustainable smart city projects, it is important to discuss the difficulties and solutions for advancing equitable representation, empowering voices, and resolving power disparities in decision-making.">1.3.9 Representativeness (stakeholders)</a></li>
+
+                        </ul>
+                    </li>
+					<li>
+                        <input type="checkbox" class="subcategory-checkbox" id="subcategory1_4">
+                        <label for="subcategory1_4" class="subcategory-label">1.4 Citizen engagement and participation</label>
+                        <ul class="submenu">
+                            <!-- Third-level categories (subsubcategories) -->
+                            <li class="subsubcategory"><a href="#" data-definition="Appreciating the importance of public participation and collaboration in smart city research to increase the knowledge in this area. Engage people in research activities on important issues related to their well-being helps smart cities provide them with services that improve the quality of their life. It spans various fields and empowers individuals to help scientists gather information and address important questions, making science more accessible and collaborative.">1.4.1 Citizen science</a></li>
+                            <li class="subsubcategory"><a href="#" data-definition="Understanding the concept of the social exclusion which refers to the relegation to the fringes of society due to a lack of access to rights, resources, and opportunities. It is a major cause of vulnerability, which refers to exposure to a range of possible harms and being unable to deal with them adequately.">1.4.2 Vulnerability and marginalisation effects</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of the methods and mechanisms utilised to include citizens in the development of smart city projects. In order to enable individuals to contribute their perspectives, insights, and expertise to inclusive and transparent decision-making processes.">1.4.3 Engagement methods and mechanisms (citizens)</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general understanding of the concept of transparent governance which means that government officials act openly, with citizens' knowledge of the decisions the officials are making. It involves disclosing information, promoting accountability, and allowing scrutiny to ensure that citizens and interested parties can understand, monitor, and participate in the functioning of government institutions and policymaking.">1.4.4 Transparency of governance processes</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of the strategies and methods for involving residents in the co-creation of smart city solutions. Including participatory methodologies like co-design, living labs, and user involvement. In order to enhance cooperation between citizens, the government, and other stakeholders in developing digital innovation projects.">1.4.5 Co-creation methods and good practices</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of ways to bridge the digital gap, encourage user-friendly interfaces, and provide everyone with equal access to knowledge and participation possibilities. Tools, platforms, resources, and information must be available and usable by a diverse range of individuals, including those with disabilities or from marginalized communities.">1.4.6 Accessibility of tools, engagement, and information</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a level of familiarity with privacy frameworks, laws, and moral standards to protect personal information while maximising the advantages of data-driven technologies. Building trust and guaranteeing ethical data practises in smart cities require an understanding of privacy issues and respect for privacy rights of citizens.">1.4.7 Privacy (concept, value)</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Understanding the rights, obligations, and control associated with data ownership, considering both individual and group aspects. Including methods for advancing open data projects, boosting data transparency, and easing citizen access to data. Establishing transparent frameworks for data ownership and accessibility builds confidence, empowers individuals to participate in smart city projects and make informed choices.">1.4.8 Data ownership and accessibility (citizens)</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="A general understanding of the fundamentals, procedures, and advantages of co-production, including ways to involve individuals in the conception, provision, and assessment of services in order to promote a sense of ownership and enhance service quality. The effectiveness of public services as a whole as well as citizen satisfaction are all increased through co-production.">1.4.9 Co-production of services</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a level of familiarity with the methods for identifying and including underrepresented groups, marginalised communities, and vulnerable populations. Including the challenges and solutions for advancing equitable representation, empowering voices, and resolving power disparities in decision-making.">1.4.10 Representativeness (citizens)</a></li>	
+							<li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of methods for fostering communication, establishing reasonable expectations, and coordinating the objectives of all parties involved. Including ways of handling divergent expectations, improving project communication transparency, and encouraging shared understanding among stakeholders. The successful execution of smart city projects is guaranteed by effective expectation management, which fosters trust, reduces possible disputes, and ensures communication.">1.4.11 Expectation management</a></li>							
+                        </ul>
+                    </li>
+					<li>
+                        <input type="checkbox" class="subcategory-checkbox" id="subcategory1_5">
+                        <label for="subcategory1_5" class="subcategory-label">1.5 Business models</label>
+                        <ul class="submenu">
+                            <!-- Third-level categories (subsubcategories) -->
+                            <li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of business models that allow for creative and sustainable methods to produce benefits for the economy, society, and the environment. Understanding value generation processes is essential for promoting effective smart city solutions.">1.5.1 Creation, delivery and capture of value</a></li>
+                            <li class="subsubcategory"><a href="#" data-definition="Having a level of familiarity with the methods that encourage cooperation, experimentation, and information exchange, including innovation labs, incubators, and funding schemes. Understanding these mechanisms aids in fostering an innovative atmosphere and accelerating the creation of ground-breaking smart city technologies.">1.5.2 Innovation support mechanisms</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Understanding the methods used for analysing market trends, determining specific audiences, and determining the viability and demand for novel solutions. Including how to form partnerships, commercialise ideas, and build long-term revenue streams in the context of smart cities.">1.5.3 Market research and business opportunities</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of the strategies for collaborating with private businesses, utilising current infrastructure, and integrating various services and technology. The deployment of integrated and comprehensive smart city solutions is accelerated by placing a strong emphasis on business integration, which also optimises resource use.">1.5.4 Business integration opportunities</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general understanding of the benefits and challenges of using open technologies, standards, and platforms. Including ways to guarantee interoperability, scalability, and the capacity to use innovations across various stakeholders and domains in smart cities.">1.5.5 Openness of technology adoption</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of various funding methods, such as grants, venture capital, crowdfunding, public-private partnerships, and investigates their consequences and needs for smart city programmes. To secure financial resources and ensure the long-term viability of smart city projects, it is essential to understand the funding landscape.">1.5.6 Funding landscape</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a level of familiarity with the approaches for raising awareness, articulating value propositions, and interacting with potential users and stakeholders. Including the particular challenges in promoting cutting-edge solutions for smart cities while showcasing how to develop a citizen-centric strategy.">1.5.7 Marketing and sales</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general understanding of the methods used for determining the economic viability, return on investment, and overall societal impact of implementing smart city solutions. Cost-benefit analysis helps prioritise projects that have the most value and impact and guides decision-making processes.">1.5.8 Costs-benefit analysis</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a level of familiarity of methods for gathering and analysing user preferences, carrying out user-centric design processes, and creating solutions that are tailored to meet particular user needs. The success of smart city projects is increased when user satisfaction, adoption, and other factors are taken into account.">1.5.9 Customer preferences and interests</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of different structured frameworks and strategies that guide the management, governance, and delivery of urban services and technologies, including public-private partnerships, collaborative networks, and decentralised decision-making frameworks. Understanding operating models is essential for efficient coordination, resource allocation, and decision-making within smart city government systems.">1.5.10 Operating models</a></li>							
+                        </ul>
+                    </li>
+					<li>
+                        <input type="checkbox" class="subcategory-checkbox" id="subcategory1_6">
+                        <label for="subcategory1_6" class="subcategory-label">1.6 Finance and procurement</label>
+                        <ul class="submenu">
+                            <!-- Third-level categories (subsubcategories) -->
+                            <li class="subsubcategory"><a href="#" data-definition="Having a general understanding of the frameworks, regulations, and financing sources that prioritise sustainable development objectives and deal with social and environmental issues. Understanding the macro environment makes it easier to find investment possibilities that are consistent with the sustainability and resilience concepts.">1.6.1 Macro environment of sustainable investment priorities</a></li>
+                            <li class="subsubcategory"><a href="#" data-definition="In order to guarantee the delivery of high-quality and secure services in smart cities, it is important to have a general knowledge of best practises for vendor evaluation, negotiation, and performance monitoring. The success of a project is influenced by the effectiveness of vendor management, which fosters beneficial relationships and reduces risks.">1.6.2 Vendor management</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a level of familiarity with the procedures for establishing performance benchmarks, gathering pertinent data, and analysing important performance indicators. Including how crucial it is to track advancement, pinpoint problem areas, and support the use of evidence-based decision-making in the financing and procurement of smart city projects.">1.6.3 Benchmarking and performance tracking</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general understanding of risk management strategies, including scenario analysis, financial forecasting, and financial planning. As well as the financial risks unique to smart cities, like revenue ambiguity, cost overruns, and funding instability, and the value of proactive risk management.">1.6.4 Financial risk analysis</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of the methods for locating cost-saving opportunities, streamlining procedures, and putting into practise effective financial management practises. Including how important cost optimisation is for improving project affordability, sustainability, and value for money.">1.6.5 Cost savings</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a level of familiarity of financial modelling, cash flow analysis, and profitability measures for project performance evaluation and investment attraction to support stakeholders' decision-making and guarantee the financial viability of smart city projects.">1.6.6 Fund flow and profitability</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of variables including net present value, internal rate of return, and payback duration to help stakeholders evaluate the viability and allure of investments from a financial standpoint. Understanding financial indicators helps with resource allocation and well-informed decision-making.">1.6.7 Financial metrics and rate of return methods</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="In order to ensure compliance with tax legislation, it is important to have a level of familiarity with tax planning, compliance structures, and reporting practises. In turn, this promotes financial accountability and transparency by assisting stakeholders in navigating complex tax environments and optimising tax-related actions.">1.6.8 Tax compliance</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Understanding the landscape financial mechanisms and strategies employed to fund and sustain urban development initiatives, infrastructure projects, and technology deployments. It involves the analysis of their advantages and disadvantages, any ethical concerns about them and how they are appropriately deployed in the context of smart cities.">1.6.9 Financing tools</a></li>
+                        </ul>
+                    </li>
+                    <!-- Add more second-level categories as needed -->
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" class="category-checkbox" id="category2">
+                <label for="category2" class="category-label">2. Digital and Technical</label>
+                <ul class="submenu">
+                    <!-- Second-level categories (subcategories) -->
+                    <li>
+                        <input type="checkbox" class="subcategory-checkbox" id="subcategory2_1">
+                        <label for="subcategory2_1" class="subcategory-label">2.1 Digital technology trends</label>
+                        <ul class="submenu">
+                            <!-- Third-level categories (subsubcategories) -->
+                            <li class="subsubcategory"><a href="#" data-definition="This includes having a general knowledge of the digital universe that the cities operate in, that consists of digital channels and assets which citizens and stakeholders can have access to, such as analytical modelling tools, visualisation tools, computational tools and algorithms, networking and telecommunication tools, sensing technologies, cybersecurity and cryptography tools, and automation and digital control technologies.">2.1.1 Landscape of digital tools and technologies</a></li>
+                            <li class="subsubcategory"><a href="#" data-definition="This includes having a general knowledge of new tools and methods that help city managers and planners make better-informed decision making, these innovative solutions may need less resources, can be subject to exponential growth, and more likely to enhance the economy and the structure of smart cities and can be enabled by the technologies, such as: IoT, blockchain, big data, and artificial intelligence.">2.1.2 Disruptive innovation</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="This includes having a level of familiarity with the improvement and exploitation of the existing services and technologies in smart cities that will have manageable impacts on citizens and stakeholders.">2.1.3 Incremental innovation</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="This includes having a general knowledge of collecting data about and from smart city users and stakeholders, which can be analysed in order to determine a trend and identify a pattern that can be analysed further to determine and predict its development as time progresses.">2.1.4 Trend analysis</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <input type="checkbox" class="subcategory-checkbox" id="subcategory2_2">
+                        <label for="subcategory2_2" class="subcategory-label">2.2 Technology applications</label>
+                        <ul class="submenu">
+                            <!-- Third-level categories (subsubcategories) -->
+                            <li class="subsubcategory"><a href="#" data-definition="Having a general understanding of data capture tools such as sensors, cameras, survey mechanisms and systems specifically designed and deployed to collect, analyse, and interpret data related to various aspects of urban life and infrastructure, providing valuable insights for better decision-making in urban management (e.g., waste management or traffic management).">2.2.1 Measurement tools</a></li>
+                            <li class="subsubcategory"><a href="#" data-definition="Having a level of familiarity with the strategic and systematic utilization of established tools, technologies, or methodologies that have demonstrated their effectiveness in improving urban living conditions, sustainability, and efficiency.">2.2.2 Best practice (tool application)</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="This includes having a general understanding of the quantitative and qualitative tools and methods that are used to collect data in smart cities. An example of quantitative ones can be implementing sensors and cameras to collect data about citizens' behaviour in a specific area of management (e.g., waste management or traffic management) and collecting data from social media (e.g., location data). An example of qualitative ones can be collecting citizens' and stakeholders’ feedback via interviews, digital surveys and feedback from social media.">2.2.3 Data collection tools and methods (quantitative & qualitative)</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general understanding of what’s involved in long-term processes such as long-term campaigns of data collection. Including reviewing periodically whether there is an ongoing need for monitoring and setting up the maintenance and calibration schedule for the system.">2.2.4 Monitoring tools and methods (quantitative & qualitative)</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general understanding of evaluating the effectiveness of a digital tool by comparing it with some other tools of an accepted standard in the industry. This includes benchmarking individual tools and benchmarking urban measurement systems (e.g., assembly of tools functioning within a system).">2.2.5 Benchmarking</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of encrypting the stored data in order to only guarantee access to authorised users and avoid providing access to unauthorised ones, to ensure data privacy. ">2.2.6 Encryption</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <input type="checkbox" class="subcategory-checkbox" id="subcategory2_3">
+                        <label for="subcategory2_3" class="subcategory-label">2.3 Data science and analytics</label>
+                        <ul class="submenu">
+                            <!-- Third-level categories (subsubcategories) -->
+                            <li class="subsubcategory"><a href="#" data-definition="This includes having a general understanding of processes that ensures the quality of data according to quality dimensions such as accuracy, completeness, consistency, age, and uniqueness.">2.3.1 Data quality management</a></li>
+                            <li class="subsubcategory"><a href="#" data-definition="Understanding the different stages involved in the data science lifecycle, including Data mining, analytics and algorithms, Data integration (incl. fusion and assimilation), Information visualisation, Data cleaning and treatment, Data inventory (availability), Data storage, Model building and training, Model deployment and maintenance.">2.3.2 Data science lifecycle</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Understanding how Insights into the spatial patterns, population dynamics, and social aspects of urban regions can be gained by using geospatial analysis tools and demographic data, to enable evidence-based urban planning and resource allocation.">2.3.3 Spatial and demographic analysis</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of making predictions or projections about urban phenomena and smart city interventions by using statistical and probabilistic approaches to analyse and interpret data, evaluate uncertainties, and analyse trends.">2.3.4 Statistical and probabilistic methods</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a level of familiarity with utilising uniform metadata, ontologies, and data models to guarantee data integration, interoperability, and effective data management across various smart city systems and platforms.">2.3.5 Metadata, ontologies and data models</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Understanding the guiding concepts, frameworks, and systems that promote cooperation, innovation, and data-driven decision-making across stakeholders, enabling secure and responsible data sharing.">2.3.6 Data sharing ecosystems</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="It is a representation of how data flows through different stages, with each stage adding value to the data and contributing to the overall goals and objectives of an organisation. To maximise the value and societal impact of data in smart city projects, it is important to be aware of the steps involved in the data value chain, from data generation and gathering to data analysis, visualisation, and utilisation. ">2.3.7 Data value chain</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <input type="checkbox" class="subcategory-checkbox" id="subcategory2_4">
+                        <label for="subcategory2_4" class="subcategory-label">2.4 Urban systems and built environment</label>
+                        <ul class="submenu">
+                            <!-- Third-level categories (subsubcategories) -->
+                            <li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of establishing and utilising relevant indicators to evaluate the effectiveness, efficiency, and sustainability of smart urban systems, such as waste management, transportation, energy, and water, and using these indicators to guide decision-making.">2.4.1 System performance indicators</a></li>
+                            <li class="subsubcategory"><a href="#" data-definition="To achieve integrated and sustainable urban development, it is important to recognise the interdependencies and connections among various urban systems and stakeholders, as well as how to manage and coordinate activities across organisational boundaries.">2.4.2 Boundary spanning and management</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Understanding the complex and dynamic behaviour of urban systems using system dynamics concepts and approaches, identifying the underlying causes and impacts of system behaviour, and creating interventions that achieve the envisioned outcomes.">2.4.3 Principles of system dynamics</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Investigating the social and technological factors on the adoption and application of cutting-edge practises and technologies in the built environment and figuring out how these factors affect the accomplishment and sustainability of smart city projects.">2.4.4 Socio-technical innovation theory</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Recognising the impact of previous actions and technological advancements on the present situation and potential evolution of built environment systems, and taking path-dependent dynamics into account while designing and putting into practise smart city solutions.">2.4.5 Path dependence in build environment socio-technical systems</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of developing and putting into practise suitable business, information systems and technological architectures and infrastructures that allow the integration, interoperability, and scalability of digital solutions in urban contexts, enabling the seamless interchange of data and services between diverse stakeholders and systems.">2.4.6 Architectures for Digital Cities</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <input type="checkbox" class="subcategory-checkbox" id="subcategory2_5">
+                        <label for="subcategory2_5" class="subcategory-label">2.5 Cybersecurity</label>
+                        <ul class="submenu">
+                            <!-- Third-level categories (subsubcategories) -->
+                            <li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of how to set, control, administer, and monitor conformance with security policy and manage people engagement, awareness and training.">2.5.1 Cybersecurity policy, governance and people</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general understanding of the concept to secure network and digital devices and system administration design and management.">2.5.2 Cybersecurity systems administration</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general understanding of the concepts and methods to protect urban data management and identity and access management.">2.5.3 Cybersecurity data administration</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of how to secure data and infrastructure and how to remain urban operations after an incident or an adverse event.">2.5.4 Cyber incident management and response</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general understanding of the concept to secure urban critical infrastructure and that brings business continuity, information systems security and organisational resilience together.">2.5.5 Critical urban infrastructure and resilience</a></li>
+                        </ul>
+                    </li>
+                    <!-- Add more second-level categories as needed -->
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" class="category-checkbox" id="category3">
+                <label for="category3" class="category-label">3. Ethics and Responsible Innovation</label>
+                <ul class="submenu">
+                    <!-- Second-level categories (subcategories) -->
+                    <li>
+                        <input type="checkbox" class="subcategory-checkbox" id="subcategory3_1">
+                        <label for="subcategory3_1" class="subcategory-label">3.1 Anticipating impact</label>
+                        <ul class="submenu">
+                            <!-- Third-level categories (subsubcategories) -->
+                            <li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of forecasting and foresight techniques for determining and comprehending the social, economic, and environmental impacts of technological advancements in smart cities. Policymakers and stakeholders can take proactive action to address problems and opportunities by anticipating their impacts.">3.1.1 Foresight / forecasting impact</a></li>
+                            <li class="subsubcategory"><a href="#" data-definition="Having a level of familiarity of possible biases that could appear during the data collection and sampling phases of smart city projects. Including the necessity for representative and inclusive datasets and the ethical repercussions of biased data. Fair and equitable decision-making procedures are supported by an understanding of bias in data gathering and its mitigation.">3.1.2 Bias in data collection and sampling</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general understanding of how public and private organizations contribute to societal well-being through the delivery of services, the achievement of high-level outcomes, and the establishment of trust, legitimacy, and confidence in government. It emphasizes the efficient use of resources, addressing the needs and preferences of citizens, and creating positive economic, social, and environmental impacts for the public.">3.1.3 Public value concept</a></li>
+                            <li class="subsubcategory"><a href="#" data-definition="Having a level of familiarity of challenges like information access, freedom of expression, data protection, and privacy of individuals and communities in the context of digital technologies and data usage within urban environments. For the ethical and responsible use of technology in smart cities, it is essential to recognise and protect digital rights.">3.1.4 Digital rights</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general understanding of the planning and forecasting approaches that start with a desired future outcome and works backward to identify the steps and actions needed to reach that goal. Back-casting supports creative answers to current problems and promotes responsible decision-making. ">3.1.5 Back-casting</a></li>
+                            <li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of ethical principles, prescriptions, and frameworks designed to ensure the appropriate and moral management of data. Stakeholders can negotiate complex ethical issues and adopt ethical behaviours by having a clear understanding of the landscape of data ethics frameworks.">3.1.6 Landscape of data ethics frameworks</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <input type="checkbox" class="subcategory-checkbox" id="subcategory3_2">
+                        <label for="subcategory3_2" class="subcategory-label">3.2 Reflecting on causes and mechanisms</label>
+                        <ul class="submenu">
+                            <!-- Third-level categories (subsubcategories) -->
+                            <li class="subsubcategory"><a href="#" data-definition="Having a general understanding of the ethical responsibilities of various parties, such as citizens, organisations, and governments, as well as how they affect technical advancement, utilisation, and governance. The identification and resolution of potential ethical issues as well as the promotion of moral behaviour are aided by reflection on agents and behaviours.">3.2.1 Agents (entities with agency) and behaviors</a></li>
+                            <li class="subsubcategory"><a href="#" data-definition="Having a level of familiarity with the ethical implications of global market dynamics, including concerns about competition, market concentration, and inequality. City leaders can better manage global market pressures and help advance responsible digital innovation by understanding the macroenvironment.">3.2.2 Macro-environment of global markets</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general understanding of the underlying assumptions, beliefs and values that shape technical advancement, governmental decision-making, and public opinion. To encourage inclusive and culturally sensitive approaches in smart city projects, it is helpful to reflect on assumptions, beliefs, and values in order to identify unconscious biases.">3.2.3 Assumptions, beliefs, and values</a></li>
+                            <li class="subsubcategory"><a href="#" data-definition="Having a general understanding of the fundamentals of critical thinking, along with how they apply to smart city projects. City leaders can examine ethical implications, spot potential biases, and arrive at informed judgements through cultivating critical thinking abilities.">3.2.4 Principles of critical thinking</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Understanding how cultural norms, values, and practises influence ethical decisions and have an impact on the design, implementation, and use of smart city projects. It is easier to design contextually suitable and morally conscientious answers when one is aware of the larger cultural and societal background.">3.2.5 Macro-environment of culture and practices</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <input type="checkbox" class="subcategory-checkbox" id="subcategory3_3">
+                        <label for="subcategory3_3" class="subcategory-label">3.3 Deliberating options</label>
+                        <ul class="submenu">
+                            <!-- Third-level categories (subsubcategories) -->
+                            <li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of methods for encouraging openness and democratic involvement while ensuring a range of viewpoints and stakeholder representation. Openness and inclusion allow for more moral and responsible governance, which helps smart city ideas gain credibility and acceptability.">3.3.1 Openness and inclusion</a></li>
+                            <li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of strategies for empowering citizens through participatory procedures, information access, and capacity-building. By ensuring that residents' rights, needs, and ambitions are taken into account in the governance of smart cities, citizens empowerment can enhance ethical considerations.">3.3.2 Empowerment in governance processes</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of strategies and frameworks for encouraging constructive dialogue and informed debates. Deliberation encourages critical thought, dialogue, and the exploration of other points of view during challenging decision-making processes, which helps to produce ethical outcomes.">3.3.3 Deliberation and debate in governance processes</a></li>
+                            <li class="subsubcategory"><a href="#" data-definition="Having a level of familiarity with strategies for ethically resolving disputes and achieving consensus among stakeholders with different priorities. Decision-making procedures that are more inclusive and sustainable benefit from the pursuit of consensus and the resolution of conflicts.">3.3.4 Consensus seeking and conflict resolution</a></li>
+							<li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of participative strategies that facilitate group decision-making and the co-creation of information and solutions. By recognising various viewpoints, encouraging trust, and assuring the responsiveness of smart city governance, co-creation can improve ethical practises.">3.3.5 Co-creation in governance processes</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <input type="checkbox" class="subcategory-checkbox" id="subcategory3_4">
+                        <label for="subcategory3_4" class="subcategory-label">3.4 Embedding responsiveness</label>
+                        <ul class="submenu">
+                            <!-- Third-level categories (subsubcategories) -->
+                            <li class="subsubcategory"><a href="#" data-definition="Having a general knowledge of methods to improve the adaptability, agility, and resilience of decision-making processes. Stakeholder empowerment makes it possible for them to foresee and address ethical issues, promoting responsive and responsible governance.">3.4.1 Empowerment for responsiveness</a></li>
+                            <li class="subsubcategory"><a href="#" data-definition="Having a level of familiarity with strategies and frameworks for incorporating ethical issues into risk management practises. It involves identifying, assessing, and mitigating potential risks and uncertainties in a systematic and proactive manner to minimize negative impacts. Understanding the notion of risk management enables stakeholders to proactively address potential ethical issues, improve decision-making processes, and guarantee the ethical execution of smart city projects.">3.4.2 Risk management concept</a></li>
+                        </ul>
+                    </li>
+                    <!-- Add more second-level categories as needed -->
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h2>Competency Definition</h2>
+        <p id="subsubcategory-title"></p> <!-- Display subsubcategory title here -->
+        <p id="definition">Click on a competency cluster, a competency unit, and a competency to see its definition here.</p>
+    </div>
+
+    <!-- JavaScript to handle accordion effect and definition display -->
+    <script>
+        const categories = document.querySelectorAll('.category-checkbox');
+        const subcategories = document.querySelectorAll('.subcategory-checkbox');
+        const subsubcategories = document.querySelectorAll('.subsubcategory a');
+        const definitionArea = document.getElementById('definition');
+        const subsubcategoryTitle = document.getElementById('subsubcategory-title'); // Add this line
+
+        // Function to collapse other categories, subcategories, and subsubcategories
+        function collapseOthers(checkbox) {
+            categories.forEach((category) => {
+                if (category !== checkbox) {
+                    category.checked = false;
+                }
+            });
+
+            subcategories.forEach((subcategory) => {
+                if (subcategory !== checkbox) {
+                    subcategory.checked = false;
+                }
+            });
+        }
+
+        // Add click event listeners to categories to toggle submenu visibility
+        categories.forEach((category) => {
+            category.addEventListener('change', () => {
+                // Hide all submenus
+                subcategories.forEach((subcategory) => {
+                    subcategory.checked = false;
+                });
+
+                // Collapse other categories
+                collapseOthers(category);
+            });
+        });
+
+        // Add click event listeners to subsubcategories to display definitions and title
+        subsubcategories.forEach((subsubcat) => {
+            subsubcat.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent the default link behavior
+                const definition = subsubcat.getAttribute('data-definition');
+                const subsubcategory = subsubcat.textContent; // Get the subsubcategory text
+                definitionArea.textContent = definition;
+                subsubcategoryTitle.textContent = subsubcategory; // Display subsubcategory title
+            });
+        });
+		
+		// Function to collapse other subcategories and subsubcategories
+        function collapseOtherSubcategories(subcategoryCheckbox) {
+            subcategories.forEach((subcategory) => {
+                if (subcategory !== subcategoryCheckbox) {
+                    subcategory.checked = false;
+                }
+            });
+
+            subsubcategories.forEach((subsubcat) => {
+                subsubcat.checked = false;
+            });
+        }
+		
+		// Add click event listeners to subcategories to collapse other subcategories and subsubcategories
+		subcategories.forEach((subcategory) => {
+			subcategory.addEventListener('change', () => {
+			collapseOtherSubcategories(subcategory); // Collapse other subcategories and subsubcategories
+    });
+});
+
+    </script>
+
+    <!-- Clear floats -->
+    <div class="clear"></div>
+</body>
+</html>
